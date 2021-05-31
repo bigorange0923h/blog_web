@@ -1,17 +1,22 @@
 <!-- 博客首页头部 -->
 <template>
   <div class="home-banner">
+    <div>
+      <ul class="m-navigationBar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
     <div class="banner-container">
-      <transition name="fade">
-        <h1 class="blog-title animated zoomIn">欢迎</h1>
-      </transition>
+      <h1 class="blog-title animated zoomIn">欢迎</h1>
       <h2>来到大橙子的博客</h2>
       <!-- 向下滚动 -->
       <div class="scroll-down" @click="scrollDown">
-        <h4><i class="el-icon-arrow-down"></i></h4>
+        <i id="scroll-down" class="el-icon-arrow-down"></i>
       </div>
     </div>
-    <!--中间内容,如果太窄了可放到container    <div  class="m-container m-padded-tb-big">-->
   </div>
 </template>
 
@@ -21,7 +26,15 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    // 初始化
+    scrollDown() {
+      window.scrollTo({
+        behavior: "smooth",
+        top: document.documentElement.clientHeight,
+      });
+    },
+  },
   components: {},
   created() {},
 };
@@ -34,8 +47,7 @@ export default {
   left: 0;
   right: 0;
   height: 100vh;
-  background: url("http://r.photo.store.qq.com/psc?/V53KcXfb1umonn4HbITu3rINxs43TczD/45NBuzDIW489QBoVep5mcQaBtLM2yTpYe999VZqnRjqLW3e23.UCR78O5Km8SpsknNgOGpEzdY7QHY1usDO6pbksfeQBV5CqlMGgsjJVV9s!/r")
-    center center / cover no-repeat;
+  background: url("../assets/home/bg.png") center center / cover no-repeat;
   background-color: #49b1f5;
   background-attachment: fixed;
   text-align: center;
@@ -47,6 +59,88 @@ export default {
   line-height: 1.5;
   color: #eee;
 }
+#scroll-down {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  animation: mymove 2s infinite;
+  -webkit-animation: mymove 2s infinite; /*Safari and Chrome*/
+}
+@keyframes mymove {
+  0% {
+    bottom: 0px;
+  }
+  25% {
+    bottom: 5px;
+  }
+  50% {
+    bottom: 10px;
+  }
+  75% {
+    bottom: 5px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/ {
+  0% {
+    bottom: 0px;
+  }
+  25% {
+    bottom: 5px;
+  }
+  50% {
+    bottom: 10px;
+  }
+  75% {
+    bottom: 5px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+.scroll-down {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.scroll-down i {
+  font-size: 2rem;
+}
+
+// 顶部水平导航栏
+ul.m-navigationBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.m-navigationBar li {
+  float: right;
+  margin: 0;
+}
+
+ul.m-navigationBar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.m-navigationBar li a:hover:not(.active) {
+  background-color: #111;
+}
+
+ul.m-navigationBar li a.active {
+  background-color: #4caf50;
+}
+
 @media (min-width: 760px) {
   .blog-title {
     font-size: 2.5rem;
@@ -122,14 +216,5 @@ export default {
     font-size: 1.25rem;
     transition: all 0.3s;
   }
-}
-.scroll-down {
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-.scroll-down i {
-  font-size: 2rem;
 }
 </style>

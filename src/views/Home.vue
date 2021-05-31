@@ -1,5 +1,6 @@
 <template>
-  <HomeHead>11111</HomeHead>
+  <HomeHead></HomeHead>
+  <div class="m-home"></div>
 </template>
 
 <script>
@@ -17,4 +18,12 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+.m-home {
+  padding-top: 100vh !important;
+  padding-bottom: 0px !important;
+  height: 100vh;
+}
+el-container {
+  top: 0px !important;
+}
 </style>
