@@ -4,7 +4,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import HomeHead from "@/components/HomeHead.vue";
 
 export default {

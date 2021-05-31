@@ -1,13 +1,23 @@
 <!-- 博客首页头部 -->
 <template>
   <div class="home-banner">
-    <div>
-      <ul class="m-navigationBar">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
+    <div id="top-navbar">
+      <el-menu
+        :default-active="activeIndex"
+        class="el-menu"
+        mode="horizontal"
+        @select="handleSelect"
+      >
+        <el-menu-item index="1"
+          ><i class="el-icon-s-home"></i>
+          <span>首页</span>
+        </el-menu-item>
+        <el-menu-item index="2"
+          ><i class="el-icon-files"></i>
+          <span>归档</span>
+        </el-menu-item>
+        <el-menu-item index="3">关于我</el-menu-item>
+      </el-menu>
     </div>
     <div class="banner-container">
       <h1 class="blog-title animated zoomIn">欢迎</h1>
@@ -21,6 +31,9 @@
 </template>
 
 <script>
+import "../assets/css/animates.css";
+import TopNavBar from "@/components/TopNavBar.vue";
+
 export default {
   name: "HomeHead",
   data() {
@@ -48,12 +61,23 @@ export default {
   right: 0;
   height: 100vh;
   background: url("../assets/home/bg.png") center center / cover no-repeat;
-  background-color: #49b1f5;
   background-attachment: fixed;
   text-align: center;
   color: #fff !important;
-  animation: header-effect 1s !important;
 }
+@keyframes header-effect {
+  0% {
+    opacity: 0.5;
+    filter: alpha(opacity=0.5);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    filter: none;
+    transform: translateY(0);
+  }
+}
+
 .banner-container {
   margin-top: 43vh;
   line-height: 1.5;
@@ -111,39 +135,25 @@ export default {
   font-size: 2rem;
 }
 
-// 顶部水平导航栏
-ul.m-navigationBar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+//================================================================  顶部水平导航栏 ================================================================
+#top-navbar {
+  width: 100%;
+  animation: header-effect 1s !important;
 }
 
-ul.m-navigationBar li {
+.el-menu {
+  width: 100%;
   float: right;
-  margin: 0;
+  background-color: rgb(255, 255, 255);
 }
-
-ul.m-navigationBar li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.el-menu el-menu-item {
+  float: right;
 }
-
-ul.m-navigationBar li a:hover:not(.active) {
-  background-color: #111;
-}
-
-ul.m-navigationBar li a.active {
-  background-color: #4caf50;
-}
+// ==================================================================================================================================================
 
 @media (min-width: 760px) {
   .blog-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .blog-intro {
     font-size: 1.5rem;
