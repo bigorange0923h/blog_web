@@ -1,24 +1,36 @@
 <!-- 博客首页头部 -->
 <template>
   <div class="home-banner">
-    <div id="top-navbar">
-      <el-menu
-        :default-active="activeIndex"
-        class="el-menu"
-        mode="horizontal"
-        @select="handleSelect"
-      >
-        <el-menu-item index="1"
-          ><i class="el-icon-s-home"></i>
-          <span>首页</span>
-        </el-menu-item>
-        <el-menu-item index="2"
-          ><i class="el-icon-files"></i>
-          <span>归档</span>
-        </el-menu-item>
-        <el-menu-item index="3">关于我</el-menu-item>
-      </el-menu>
-    </div>
+    <el-affix :offset="0">
+      <div id="top-navbar">
+        <div id="top-navbar-left">
+          <p>Big Orange</p>
+        </div>
+
+        <div id="top-navbar-right">
+          <el-menu
+            :default-active="activeIndex"
+            class="el-menu"
+            mode="horizontal"
+            @select="handleSelect"
+          >
+            <el-menu-item index="home"
+              ><i class="el-icon-s-home"></i>
+              <span>首页</span>
+            </el-menu-item>
+            <el-menu-item index="files"
+              ><i class="el-icon-files"></i>
+              <span>归档</span>
+            </el-menu-item>
+
+            <el-menu-item index="user"
+              ><i class="el-icon-user"></i> <span>关于我</span></el-menu-item
+            >
+          </el-menu>
+        </div>
+      </div>
+    </el-affix>
+
     <div class="banner-container">
       <h1 class="blog-title animated zoomIn">欢迎</h1>
       <h2>来到大橙子的博客</h2>
@@ -47,9 +59,20 @@ export default {
         top: document.documentElement.clientHeight,
       });
     },
+
+    handleScroll() {
+      var scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      console.log(scrollTop);
+    },
   },
   components: {},
   created() {},
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
 };
 </script>
 
@@ -61,9 +84,9 @@ export default {
   right: 0;
   height: 100vh;
   background: url("../assets/home/bg.png") center center / cover no-repeat;
+  // background: black;
   background-attachment: fixed;
   text-align: center;
-  color: #fff !important;
 }
 @keyframes header-effect {
   0% {
@@ -139,16 +162,24 @@ export default {
 #top-navbar {
   width: 100%;
   animation: header-effect 1s !important;
+  height: 60px;
+  background-color: #fff;
+  border-bottom: 2px solid transparent;
+}
+#top-navbar-left {
+  height: 100%;
+  float: left;
+}
+#top-navbar-left p {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 22px;
+}
+#top-navbar-right {
+  height: 100%;
+  float: right;
 }
 
-.el-menu {
-  width: 100%;
-  float: right;
-  background-color: rgb(255, 255, 255);
-}
-.el-menu el-menu-item {
-  float: right;
-}
 // ==================================================================================================================================================
 
 @media (min-width: 760px) {
