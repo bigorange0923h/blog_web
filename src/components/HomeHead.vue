@@ -38,9 +38,8 @@
           <i class="el-icon-menu"></i>
         </el-button>
       </div>
-      <el-drawer class="menu_drawer" v-model="drawer" :with-header="false">
-        这是抽屉
-        <div class="top-navbar-context"></div>
+      <el-drawer title="我是标题" v-model="drawer" :with-header="false">
+        <div class="drawer-context"></div>
       </el-drawer>
     </el-affix>
 
@@ -238,38 +237,15 @@ export default {
 
 //================================================================  垂直导航栏 start ================================================================
 .mobile-navbar-btn {
-  background-color: rgba(255, 251, 251, 0);
+  background-color: rgb(255, 251, 251, 0);
   color: #ffffff;
   font: 0.5em;
 }
-.el-drawer {
-  position: relative;
-  left: 1100px;
-  top: 154px;
-  padding: 0;
-  width: 28.125vw !important;
-  height: 28.385vw;
-  background: rgba(7, 18, 26, 0.8);
-  font-size: 16px;
-}
 
-.el-drawer__header {
-  padding: 0 !important;
-  width: 520px !important;
-  height: 30px;
-  margin: 12px;
-  font-size: 16px;
-  color: #ffffff;
-  background: rgba(19, 32, 42, 0.5) !important;
-}
-
-.el-drawer__body {
-  margin: 0px 10px 10px 10px;
-  background: rgba(19, 32, 42, 0.5) !important;
-  padding: 0;
-  width: 520px !important;
-  height: 340px;
-  position: relative;
+.drawer-context {
+  width: 100%;
+  height: 100%;
+  background-color: black;
 }
 
 //修改按钮获取焦点时的样式
