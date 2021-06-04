@@ -39,6 +39,7 @@
         </el-button>
       </div>
       <el-drawer class="menu_drawer" v-model="drawer" :with-header="false">
+        这是抽屉
         <div class="top-navbar-context"></div>
       </el-drawer>
     </el-affix>
@@ -241,15 +242,34 @@ export default {
   color: #ffffff;
   font: 0.5em;
 }
-
-.el-drawer__body {
-  background-color: black !important;
-  color: green;
+.el-drawer {
+  position: relative;
+  left: 1100px;
+  top: 154px;
+  padding: 0;
+  width: 28.125vw !important;
+  height: 28.385vw;
+  background: rgba(7, 18, 26, 0.8);
+  font-size: 16px;
 }
 
-//.el-drawer.ltr, .el-drawer.rtl
-.el-drawer {
-  background-color: rgb(44, 44, 44, 0) !important;
+.el-drawer__header {
+  padding: 0 !important;
+  width: 520px !important;
+  height: 30px;
+  margin: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background: rgba(19, 32, 42, 0.5) !important;
+}
+
+.el-drawer__body {
+  margin: 0px 10px 10px 10px;
+  background: rgba(19, 32, 42, 0.5) !important;
+  padding: 0;
+  width: 520px !important;
+  height: 340px;
+  position: relative;
 }
 
 //修改按钮获取焦点时的样式
