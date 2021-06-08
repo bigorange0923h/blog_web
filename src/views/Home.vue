@@ -5,7 +5,7 @@
 
 <script>
 import HomeHead from "@/components/HomeHead.vue";
-
+import "../assets/css/animates.css";
 export default {
   name: "Home",
   components: {

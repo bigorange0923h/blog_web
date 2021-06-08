@@ -28,8 +28,10 @@
           </el-menu>
         </div>
       </div>
+      <!--  手机界面菜单打开按钮 -->
       <div class="mobile-navbar pc-hidden">
         <el-button
+          v-show="mobile_show"
           class="mobile-navbar-btn"
           @click="drawer = true"
           type="primary"
@@ -37,11 +39,47 @@
         >
           <i class="el-icon-menu"></i>
         </el-button>
+
+        <!-- 手机界面菜单 -->
+        <el-drawer
+          class="mobile-drawer"
+          v-model="drawer"
+          :with-header="false"
+          size="80%"
+        >
+          <div class="drawer-context">
+            <el-row class="tac">
+              <el-col>
+                <h5>菜单</h5>
+                <el-menu
+                  class="el-right-menu"
+                  @open="handleOpen"
+                  @close="handleClose"
+                >
+                  <el-menu-item index="1">
+                    <i class="el-icon-s-home"></i>
+                    <template #title>首页</template>
+                  </el-menu-item>
+
+                  <el-menu-item index="2">
+                    <i class="el-icon-files"></i>
+                    <template #title>归档</template>
+                  </el-menu-item>
+
+                  <el-menu-item index="3">
+                    <i class="el-icon-user"></i>
+                    <template #title>关于我</template>
+                  </el-menu-item>
+                </el-menu>
+              </el-col>
+            </el-row>
+          </div>
+        </el-drawer>
       </div>
-      <el-drawer title="我是标题" v-model="drawer" :with-header="false">
-        <div class="drawer-context"></div>
-      </el-drawer>
     </el-affix>
+    <div class="backtop-box pc-hidden">
+      <el-backtop></el-backtop>
+    </div>
 
     <div class="banner-container">
       <h1 class="blog-title animated zoomIn">欢迎</h1>
@@ -63,6 +101,7 @@ export default {
   data() {
     return {
       drawer: false,
+      mobile_show: true,
       scrollTopTemp: 0,
     };
   },
@@ -82,6 +121,10 @@ export default {
         document.body.scrollTop;
       var scroll = scrollTop - this.scrollTopTemp;
       if (scroll > 0) {
+        //向下滚动隐藏菜单
+        this.mobile_show = false;
+      } else {
+        this.mobile_show = true;
       }
     },
   },
@@ -101,7 +144,6 @@ export default {
   right: 0;
   height: 100vh;
   background: url("../assets/home/tree.jpg") center center / cover no-repeat;
-  // background: black;
   background-attachment: fixed;
   text-align: center;
 }
@@ -204,61 +246,86 @@ export default {
   border: none;
 }
 // elementui 组件
-.el-menu {
-}
-// 隐藏elementui导航栏整体下划线
-.el-menu.el-menu--horizontal {
-  border-bottom: none;
-}
-.el-menu--horizontal > .el-menu-item {
-  float: left;
-  height: 60px;
-  line-height: 60px;
-  margin: 0;
-  color: #909399;
-  background-color: rgb(44, 44, 44);
-}
-.el-menu--horizontal > .el-menu-item.is-active {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
-}
 
-.el-menu--horizontal > .el-menu-item:not(.is-disabled):hover,
-.el-menu--horizontal > .el-menu-item:not(.is-disabled):focus {
-  i {
-    color: #fdfdfd;
+// 隐藏elementui导航栏整体下划线
+.top-navbar-right {
+  .el-menu.el-menu--horizontal {
+    border-bottom: none;
   }
-  color: #fdfdfd;
-  background-color: rgb(44, 44, 44);
-  font: 0.5em;
+  .el-menu--horizontal > .el-menu-item {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
+    color: #909399;
+    background-color: rgb(44, 44, 44);
+  }
+  .el-menu--horizontal > .el-menu-item.is-active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+  }
+  .el-menu--horizontal > .el-menu-item:not(.is-disabled):hover,
+  .el-menu--horizontal > .el-menu-item:not(.is-disabled):focus {
+    i {
+      color: #fdfdfd;
+    }
+    color: #fdfdfd;
+    background-color: rgb(44, 44, 44);
+    font: 0.5em;
+  }
 }
 
 //================================================================  顶部水平导航栏 end ================================================================
 
-//================================================================  垂直导航栏 start ================================================================
-.mobile-navbar-btn {
-  background-color: rgb(255, 251, 251, 0);
-  color: #ffffff;
-  font: 0.5em;
+//================================================================  右侧导航栏 start ================================================================
+.mobile-navbar {
+  //修改按钮获取焦点时的样式
+  .el-button--primary:hover,
+  .el-button--primary:focus {
+    background-color: rgb(44, 44, 44, 0);
+  }
+  .mobile-navbar-btn {
+    background-color: rgb(255, 251, 251, 0);
+    color: #ffffff;
+    font: 0.5em;
+  }
 }
-
 .drawer-context {
-  width: 100%;
-  height: 100%;
-  background-color: black;
+  .tac {
+    color: #909399 !important;
+    background-color: rgb(44, 43, 43, 0.1);
+  }
+  .el-right-menu {
+    color: #909399;
+    height: 100%;
+    background-color: rgb(44, 43, 43, 0.1);
+    .el-menu-item {
+      color: #909399;
+      background-color: rgb(44, 43, 43, 0.1);
+    }
+    .el-menu-item:hover,
+    .el-menu-item:focus {
+      color: #ffffff;
+      background-color: rgba(22, 22, 22);
+    }
+  }
 }
 
-//修改按钮获取焦点时的样式
-.el-button--primary:hover,
-.el-button--primary:focus {
-  background-color: rgb(44, 44, 44, 0);
-}
-// .top-navbar-context {
-//   width: 100%;
-//   height: 100%;
-//   background-color: black !important;
-// }
 //================================================================  垂直导航栏 end ================================================================
+//================================================================  右下角回到顶部按钮 start ================================================================
+.backtop-box {
+  overflow-x: hidden;
+  .el-backtop {
+    right: 10px !important;
+    margin-bottom: -20px !important;
+    width: 30px !important;
+    height: 30px !important;
+    color: rgb(44, 43, 43);
+  }
+}
+
+//================================================================  右下角回到顶部按钮 end ================================================================
+
 @media (min-width: 760px) {
   .pc-hidden {
     display: none;
