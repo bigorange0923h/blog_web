@@ -1,5 +1,38 @@
 
-
+@media (max-width: 759px) {
+    .blog-title {
+      font-size: 24px;
+    }
+    .blog-contact {
+      font-size: 1.25rem;
+      line-height: 2;
+    }
+    .home-container {
+      width: 100%;
+      margin: calc(100vh - 66px) auto 0 auto;
+    }
+    .article-card {
+      margin-top: 1rem;
+    }
+    .article-cover {
+      border-radius: 8px 8px 0 0 !important;
+      height: 230px !important;
+      width: 100%;
+    }
+    .article-cover div {
+      border-radius: 8px 8px 0 0 !important;
+    }
+    .article-wrapper {
+      padding: 1.25rem 1.25rem 1.875rem;
+    }
+    .article-wrapper a {
+      font-size: 1.25rem;
+      transition: all 0.3s;
+    }
+    .mobile-hidden {
+      display: none;
+    }
+  }
 
 
 
