@@ -7,7 +7,7 @@ import installElementPlus from './plugins/element'
 import axios from 'axios'
 
 
-//E:\VUE_PROJECT\blog_web\node_modules\semantic-ui-css\semantic.min.js
+
 // 引入js文件，这里直接使用的是这个文件里的路径，不需要再resolver中修改路径之类的操作
 import semantic from '../node_modules/semantic-ui-css/semantic.min.js'
 // 引入css文件

@@ -6,7 +6,7 @@
 
 <script>
 import Home from "./views/Home.vue";
-import "./assets/css/m-mobile.css";
+import "./assets/css/m-css.css";
 
 export default {
   name: "App",
