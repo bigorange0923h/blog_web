@@ -1,25 +1,19 @@
 <!-- 博客头部菜单按钮 -->
 <template>
-  <el-affix :offset="10">
+  <el-affix :offset="15">
     <el-button
+      :style="style"
       v-show="!drawer"
       class="menu-btn"
-      size="mini"
+      size="small"
       @click="drawer = true"
       plain
     >
       <i class="el-icon-menu"></i>
     </el-button>
     <div class="menu-drawer">
-      <el-drawer
-        title="菜单"
-        v-model="drawer"
-        :with-header="false"
-        size="80%"
-        :before-close="handleClose"
-        :show-close="true"
-      >
-        <div class="ui inverted secondary stackable menu">
+      <el-drawer title="菜单" v-model="drawer" :with-header="false" size="10">
+        <div class="ui fluid inverted vertical menu m-menu">
           <h3 class="ui header center aligned item">菜单</h3>
           <a href="#" class="m-item item m-mobile-hide"
             ><i class="mini home icon"></i>首页</a
@@ -54,7 +48,32 @@ export default {
   data() {
     return {
       drawer: false,
+      style: {},
     };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.windowScroll); //监听页面滚动
+  },
+  methods: {
+    windowScroll() {
+      let clientH = $(window).height(); //视窗大小
+      let menubtnTop = $(".menu-btn").offset().top; //按钮距离顶部距离
+      if (menubtnTop - clientH >= 10) {
+        this.style = { color: `#000000`, border: `1px solid #000000` };
+      } else {
+        this.style = { color: `#ffffff`, border: `1px solid #ffffff` };
+      }
+      // 执行到变色的部分磁吸页面到顶部
+      if (menubtnTop - clientH <= 5 && menubtnTop - clientH >= 3) {
+        window.scrollTo({
+          behavior: "smooth",
+          top: document.documentElement.clientHeight,
+        });
+      }
+    },
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.windowScroll); //销毁滚动事件
   },
 };
 </script>
@@ -63,13 +82,18 @@ export default {
 .menu-btn {
   float: right;
   margin-right: 10px;
-  border: none;
+  border: 1px solid #fff;
+  background-color: rgb(0, 0, 0, 0);
+  color: #fff;
 }
 .el-drawer__body {
   background-color: rgb(0, 0, 0, 0.3) !important;
   height: 100px;
 }
 .el-drawer {
+  background-color: rgb(0, 0, 0, 0.3) !important;
+}
+.m-menu {
   background-color: rgb(0, 0, 0, 0.3) !important;
 }
 </style>
