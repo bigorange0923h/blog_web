@@ -5,9 +5,9 @@
     <div
       class="ui inverted vertical masthead center aligned segment home_banner"
     >
-      <div class="ui text container">
-        <h1 class="ui inverted header">大橙子</h1>
-        <h2>一个面向百度CV码农</h2>
+      <div class="ui text container banner_context">
+        <h1 class="blog-title ui inverted header">欢迎来到大橙子的空间</h1>
+        <h2>这个博主</h2>
         <h2>爱好广泛</h2>
         <h2>人很懒</h2>
       </div>
@@ -234,14 +234,6 @@
       </div>
     </div>
 
-    <!-- <div class="ui inverted vertical footer segment">
-        <div class="ui center aligned container">
-          <div class="ui inverted section divider"></div>
-          <p class="m-text-thin m-text-spaced m-opacity-tiny">
-            沪ICP备2021011235号
-          </p>
-        </div>
-      </div> -->
     <BlogFooter />
   </div>
 </template>
@@ -275,14 +267,14 @@ export default {
   top: 0px;
   left: 0;
   right: 0;
+
   height: 100vh;
   background: url("http://r.photo.store.qq.com/psc?/V53KcXfb1umonn4HbITu3rINxs43TczD/45NBuzDIW489QBoVep5mcQaBtLM2yTpYe999VZqnRjqLW3e23.UCR78O5Km8SpsknNgOGpEzdY7QHY1usDO6pbksfeQBV5CqlMGgsjJVV9s!/r")
     center center / cover no-repeat !important;
   background-color: #49b1f5;
   background-attachment: fixed;
-  text-align: center;
+
   color: #fff !important;
-  animation: header-effect 1s !important;
 }
 
 .scroll-down {
