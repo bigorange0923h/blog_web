@@ -61,7 +61,6 @@ export default {
     windowScroll() {
       let clientH = $(window).height(); //视窗大小
       let menubtnTop = $(".menu-btn").offset().top; //按钮距离顶部距离
-
       if (menubtnTop - clientH >= 8) {
         this.style = {
           border: `1px solid #000000`,

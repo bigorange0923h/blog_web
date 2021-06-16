@@ -20,7 +20,10 @@ export default {
 </script>
 
 <style  scoped>
-.ui.vertical.segment {
+.ui.inverted.vertical.footer.segment {
   margin-top: 100px !important;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 </style>

@@ -1,7 +1,7 @@
 <!-- 博客首页 -->
 <template>
-  <BlogMenu></BlogMenu>
   <div class="pusher">
+    <BlogMenu></BlogMenu>
     <div
       class="ui inverted vertical masthead center aligned segment home_banner"
     >
@@ -16,8 +16,10 @@
         <i id="scroll-down" class="el-icon-arrow-down"></i>
       </div>
     </div>
-
-    <div class="ui vertical stripe segment bg-transparent">
+    <div
+      class="ui vertical stripe segment bg-transparent"
+      style="z-index: index 1"
+    >
       <div class="ui container">
         <div class="ui stackable grid">
           <!-- 左边博客列表 -->
