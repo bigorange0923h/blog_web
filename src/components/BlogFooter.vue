@@ -20,4 +20,7 @@ export default {
 </script>
 
 <style  scoped>
+.ui.vertical.segment {
+  margin-top: 100px !important;
+}
 </style>

@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <div class="ui vertical stripe segment home_content bg-transparent">
+    <div class="ui vertical stripe segment bg-transparent">
       <div class="ui container">
         <div class="ui stackable grid">
           <!-- 左边博客列表 -->
@@ -234,14 +234,15 @@
       </div>
     </div>
 
-    <div class="ui inverted vertical footer segment">
-      <div class="ui center aligned container">
-        <div class="ui inverted section divider"></div>
-        <p class="m-text-thin m-text-spaced m-opacity-tiny">
-          沪ICP备2021011235号
-        </p>
-      </div>
-    </div>
+    <!-- <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+          <div class="ui inverted section divider"></div>
+          <p class="m-text-thin m-text-spaced m-opacity-tiny">
+            沪ICP备2021011235号
+          </p>
+        </div>
+      </div> -->
+    <BlogFooter />
   </div>
 </template>
 
@@ -282,9 +283,6 @@ export default {
   text-align: center;
   color: #fff !important;
   animation: header-effect 1s !important;
-}
-.home_content {
-  height: 105vh;
 }
 
 .scroll-down {
