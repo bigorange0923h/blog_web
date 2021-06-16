@@ -17,25 +17,11 @@
       </div>
     </div>
 
-    <div class="ui vertical stripe segment home_content">
+    <div class="ui vertical stripe segment home_content bg-transparent">
       <div class="ui container">
         <div class="ui stackable grid">
           <!-- 左边博客列表 -->
           <div class="eleven wide column">
-            <!-- header -->
-            <div class="ui top attached segment">
-              <div class="ui middle aligned two column grid">
-                <div class="column">
-                  <h3 class="ui teal header">博客</h3>
-                </div>
-                <div class="right aligned column">
-                  共
-                  <h2 class="ui orange header m-inline-block m-text-thin">2</h2>
-                  篇
-                </div>
-              </div>
-            </div>
-
             <!-- content -->
             <div class="ui attached segment">
               <div class="ui padded vertical segment m-padded-tb-large">
@@ -164,7 +150,7 @@
           </div>
 
           <!--右边的TOP -->
-          <div class="five wide column">
+          <div class="five wide column mobile-hidden">
             <!-- 分类 -->
             <div class="ui segments">
               <div class="ui secondary segment">
@@ -249,34 +235,11 @@
     </div>
 
     <div class="ui inverted vertical footer segment">
-      <div class="ui container">
-        <div class="ui stackable inverted divided equal height stackable grid">
-          <div class="three wide column">
-            <h4 class="ui inverted header">关于</h4>
-            <div class="ui inverted link list">
-              <a href="homepage.php#" class="item">Sitemap</a>
-              <a href="homepage.php#" class="item">Contact Us</a>
-              <a href="homepage.php#" class="item">Religious Ceremonies</a>
-              <a href="homepage.php#" class="item">Gazebo Plans</a>
-            </div>
-          </div>
-          <div class="three wide column">
-            <h4 class="ui inverted header">服务</h4>
-            <div class="ui inverted link list">
-              <a href="homepage.php#" class="item">Banana Pre-Order</a>
-              <a href="homepage.php#" class="item">DNA FAQ</a>
-              <a href="homepage.php#" class="item">How To Access</a>
-              <a href="homepage.php#" class="item">Favorite X-Men</a>
-            </div>
-          </div>
-          <div class="seven wide column">
-            <h4 class="ui inverted header">页脚</h4>
-            <p>
-              Extra space for a call to action inside the footer that could help
-              re-engage users.
-            </p>
-          </div>
-        </div>
+      <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">
+          沪ICP备2021011235号
+        </p>
       </div>
     </div>
   </div>
@@ -284,10 +247,12 @@
 
 <script>
 import BlogMenu from "@/components/BlogMenu.vue";
+import BlogFooter from "@/components/BlogFooter.vue";
 export default {
   name: "Home",
   components: {
     BlogMenu,
+    BlogFooter,
   },
   data() {
     return {};
@@ -330,5 +295,9 @@ export default {
 }
 .scroll-down i {
   font-size: 2rem;
+}
+
+.bg-transparent .ui.segment {
+  background: rgb(0, 0, 0, 0) !important;
 }
 </style>
