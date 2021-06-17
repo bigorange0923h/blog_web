@@ -7,9 +7,9 @@
     >
       <div class="ui text container banner_context">
         <h1 class="blog-title ui inverted header">欢迎来到大橙子的空间</h1>
-        <h2>这个博主</h2>
+        <h2>三分热度</h2>
         <h2>爱好广泛</h2>
-        <h2>人很懒</h2>
+        <h2>懒</h2>
       </div>
       <!-- 向下滚动 -->
       <div class="scroll-down" @click="scrollDown">
