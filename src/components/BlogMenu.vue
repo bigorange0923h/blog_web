@@ -21,12 +21,6 @@
           ><i class="mini home icon"></i>首页</a
         >
         <a href="#" class="m-item item m-mobile-hide"
-          ><i class="mini idea icon"></i> 分类</a
-        >
-        <a href="#" class="m-item item m-mobile-hide"
-          ><i class="mini tags icon"></i>标签</a
-        >
-        <a href="#" class="m-item item m-mobile-hide"
           ><i class="mini clone icon"></i>归档</a
         >
         <a href="#" class="m-item item m-mobile-hide"
