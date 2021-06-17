@@ -16,10 +16,7 @@
         <i id="scroll-down" class="el-icon-arrow-down"></i>
       </div>
     </div>
-    <div
-      class="ui vertical stripe segment bg-transparent"
-      style="z-index: index 1"
-    >
+    <div class="ui vertical stripe segment bg-transparent">
       <div class="ui container">
         <div class="ui stackable grid">
           <!-- 左边博客列表 -->
@@ -34,7 +31,7 @@
                       正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...
                     </p>
                     <div class="ui grid">
-                      <div class="eleven wide column">
+                      <div class="nine wide column">
                         <div class="ui mini horizontal link list">
                           <div class="item">
                             <img
@@ -46,81 +43,11 @@
                               <a href="#" class="header">大橙子</a>
                             </div>
                           </div>
-                          <div class="item">
-                            <i class="calendar icon"></i> 2021-03-23
-                          </div>
-                          <div class="item"><i class="eye icon"></i>1</div>
                         </div>
                       </div>
 
-                      <div class="right aligned five wide column">
-                        <a
-                          href="#"
-                          target="_blank"
-                          class="
-                            ui
-                            teal
-                            basic
-                            label
-                            m-padded-tb-tiny m-text-thin
-                          "
-                          >认知升级</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="five wide column">
-                    <a href="#" target="_blank">
-                      <img
-                        src="https://unsplash.it/800/450?image=1005"
-                        alt=""
-                        class="ui rounded image"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="ui padded vertical segment m-padded-tb-large">
-                <div class="ui mobile reversed stackable grid">
-                  <div class="ui eleven wide column">
-                    <h3 class="ui header">你真的理解什么是财富自由吗?</h3>
-                    <p class="m-text">
-                      正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...
-                    </p>
-                    <div class="ui grid">
-                      <div class="eleven wide column">
-                        <div class="ui mini horizontal link list">
-                          <div class="item">
-                            <img
-                              src="https://unsplash.it/100/100?image=1005"
-                              alt=""
-                              class="ui avatar image"
-                            />
-                            <div class="content">
-                              <a href="#" class="header">大橙子</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <i class="calendar icon"></i> 2021-03-23
-                          </div>
-                          <div class="item"><i class="eye icon"></i>1</div>
-                        </div>
-                      </div>
-
-                      <div class="right aligned five wide column">
-                        <a
-                          href="#"
-                          target="_blank"
-                          class="
-                            ui
-                            teal
-                            basic
-                            label
-                            m-padded-tb-tiny m-text-thin
-                          "
-                          >认知升级</a
-                        >
+                      <div class="right aligned six wide column">
+                        <i class="small calendar icon"></i> 2021-03-23
                       </div>
                     </div>
                   </div>
@@ -138,6 +65,174 @@
               </div>
             </div>
 
+            <div class="ui attached segment">
+              <div class="ui padded vertical segment m-padded-tb-large">
+                <div class="ui mobile reversed stackable grid">
+                  <div class="ui eleven wide column">
+                    <h3 class="ui header">你真的理解什么是财富自由吗?</h3>
+                    <p class="m-text">
+                      正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...
+                    </p>
+                    <div class="ui grid">
+                      <div class="nine wide column">
+                        <div class="ui mini horizontal link list">
+                          <div class="item">
+                            <img
+                              src="https://unsplash.it/100/100?image=1005"
+                              alt=""
+                              class="ui avatar image"
+                            />
+                            <div class="content">
+                              <a href="#" class="header">大橙子</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="right aligned six wide column">
+                        <i class="small calendar icon"></i> 2021-03-23
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="five wide column">
+                    <a href="#" target="_blank">
+                      <img
+                        src="https://unsplash.it/800/450?image=1005"
+                        alt=""
+                        class="ui rounded image"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ui attached segment">
+              <div class="ui padded vertical segment m-padded-tb-large">
+                <div class="ui mobile reversed stackable grid">
+                  <div class="ui eleven wide column">
+                    <h3 class="ui header">你真的理解什么是财富自由吗?</h3>
+                    <p class="m-text">
+                      正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...
+                    </p>
+                    <div class="ui grid">
+                      <div class="nine wide column">
+                        <div class="ui mini horizontal link list">
+                          <div class="item">
+                            <img
+                              src="https://unsplash.it/100/100?image=1005"
+                              alt=""
+                              class="ui avatar image"
+                            />
+                            <div class="content">
+                              <a href="#" class="header">大橙子</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="right aligned six wide column">
+                        <i class="small calendar icon"></i> 2021-03-23
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="five wide column">
+                    <a href="#" target="_blank">
+                      <img
+                        src="https://unsplash.it/800/450?image=1005"
+                        alt=""
+                        class="ui rounded image"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ui attached segment">
+              <div class="ui padded vertical segment m-padded-tb-large">
+                <div class="ui mobile reversed stackable grid">
+                  <div class="ui eleven wide column">
+                    <h3 class="ui header">你真的理解什么是财富自由吗?</h3>
+                    <p class="m-text">
+                      正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...
+                    </p>
+                    <div class="ui grid">
+                      <div class="nine wide column">
+                        <div class="ui mini horizontal link list">
+                          <div class="item">
+                            <img
+                              src="https://unsplash.it/100/100?image=1005"
+                              alt=""
+                              class="ui avatar image"
+                            />
+                            <div class="content">
+                              <a href="#" class="header">大橙子</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="right aligned six wide column">
+                        <i class="small calendar icon"></i> 2021-03-23
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="five wide column">
+                    <a href="#" target="_blank">
+                      <img
+                        src="https://unsplash.it/800/450?image=1005"
+                        alt=""
+                        class="ui rounded image"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ui attached segment">
+              <div class="ui padded vertical segment m-padded-tb-large">
+                <div class="ui mobile reversed stackable grid">
+                  <div class="ui eleven wide column">
+                    <h3 class="ui header">你真的理解什么是财富自由吗?</h3>
+                    <p class="m-text">
+                      正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...
+                    </p>
+                    <div class="ui grid">
+                      <div class="nine wide column">
+                        <div class="ui mini horizontal link list">
+                          <div class="item">
+                            <img
+                              src="https://unsplash.it/100/100?image=1005"
+                              alt=""
+                              class="ui avatar image"
+                            />
+                            <div class="content">
+                              <a href="#" class="header">大橙子</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="right aligned six wide column">
+                        <i class="small calendar icon"></i> 2021-03-23
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="five wide column">
+                    <a href="#" target="_blank">
+                      <img
+                        src="https://unsplash.it/800/450?image=1005"
+                        alt=""
+                        class="ui rounded image"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!--footer-->
             <div class="ui bottom attached segment">
               <div class="ui middle aligned two column grid">
@@ -278,7 +373,10 @@ export default {
 
   color: #fff !important;
 }
-
+.right.aligned.six.wide.column {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
 .scroll-down {
   cursor: pointer;
   position: absolute;

@@ -94,14 +94,23 @@ export default {
   background-color: rgb(0, 0, 0, 0);
   color: #fff;
 }
+.menu-btn .el-button.is-plain:hover,
+.el-button.is-plain:focus {
+  color: #000;
+}
+
 .el-drawer__body {
   background-color: rgb(0, 0, 0, 0.3) !important;
-  height: 100px;
 }
 .el-drawer {
   background-color: rgb(0, 0, 0, 0.3) !important;
 }
 .m-menu {
   background-color: rgb(0, 0, 0, 0.3) !important;
+}
+.menu-drawer {
+  z-index: 100;
+  position: absolute;
+  right: 0;
 }
 </style>
