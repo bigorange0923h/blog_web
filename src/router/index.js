@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Archves from '../views/Archves.vue'
 
 
 const routes = [
@@ -11,6 +12,11 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/archves',
+    name: 'Archves',
+    component: Archves
   },
 
   {

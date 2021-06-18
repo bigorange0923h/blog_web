@@ -12,9 +12,7 @@
         <h2>懒</h2>
       </div>
       <!-- 向下滚动 -->
-      <div class="scroll-down" @click="scrollDown">
-        <i id="scroll-down" class="el-icon-arrow-down"></i>
-      </div>
+      <ScrollDown />
     </div>
     <div class="ui vertical stripe segment bg-transparent">
       <div class="ui container">
@@ -338,11 +336,13 @@
 <script>
 import BlogMenu from "@/components/BlogMenu.vue";
 import BlogFooter from "@/components/BlogFooter.vue";
+import ScrollDown from "@/components/ScrollDown.vue";
 export default {
   name: "Home",
   components: {
     BlogMenu,
     BlogFooter,
+    ScrollDown,
   },
   data() {
     return {};
@@ -376,15 +376,6 @@ export default {
 .right.aligned.six.wide.column {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.4);
-}
-.scroll-down {
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-.scroll-down i {
-  font-size: 2rem;
 }
 
 .bg-transparent .ui.segment {
