@@ -17,14 +17,14 @@
     <el-drawer title="菜单" v-model="drawer" :with-header="false" size="10">
       <div class="ui fluid inverted vertical menu m-menu">
         <h3 class="ui header center aligned item">菜单</h3>
-        <a href="#" class="m-item item m-mobile-hide"
-          ><i class="mini home icon"></i>首页</a
+        <router-link to="/home" class="m-item item m-mobile-hide"
+          ><i class="mini home icon"></i>首页</router-link
         >
-        <a href="#" class="m-item item m-mobile-hide"
-          ><i class="mini clone icon"></i>归档</a
+        <router-link to="/archves" class="m-item item m-mobile-hide"
+          ><i class="mini clone icon"></i>归档</router-link
         >
-        <a href="#" class="m-item item m-mobile-hide"
-          ><i class="mini info icon"></i>关于我</a
+        <router-link to="/about" class="m-item item m-mobile-hide"
+          ><i class="mini info icon"></i>关于我</router-link
         >
         <div class="right m-item item m-mobile-hide">
           <div class="ui icon inverted transparent input">
