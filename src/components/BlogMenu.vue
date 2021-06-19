@@ -88,9 +88,11 @@ export default {
   background-color: rgb(0, 0, 0, 0);
   color: #fff;
 }
-.menu-btn .el-button.is-plain:hover,
+
+.menu-btn.el-button.is-plain:hover,
 .el-button.is-plain:focus {
   color: #000;
+  border-color: #fff;
 }
 
 .el-drawer__body {
