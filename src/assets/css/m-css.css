@@ -173,6 +173,14 @@
 
 /* pe */
 @media (max-width: 759px) {
+  .banner {
+    position: absolute;
+    top: -58px;
+    left: 0;
+    right: 0;
+    height: 280px;
+    animation: header-effect 1s;
+  }
     .banner_context {
         margin-top: 15rem;
        
@@ -213,6 +221,15 @@
 
 /* pc */
 @media (min-width: 760px) {
+  .banner {
+    position: absolute;
+    background-color: #49b1f5;
+    top: -58px;
+    left: 0;
+    right: 0;
+    height: 400px;
+    animation: header-effect 1s;
+  }
   .banner_context {
        margin-top: 20rem;
   }

@@ -91,7 +91,6 @@ export default {
 
 .menu-btn.el-button.is-plain:hover,
 .el-button.is-plain:focus {
-  color: #000;
   border-color: #fff;
 }
 

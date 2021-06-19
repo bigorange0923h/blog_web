@@ -26,8 +26,9 @@ export default {
 .scroll-down {
   cursor: pointer;
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
+  z-index: 1;
 }
 .scroll-down i {
   font-size: 2rem;
