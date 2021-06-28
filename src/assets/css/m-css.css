@@ -217,6 +217,9 @@
     .mobile-hidden {
       display: none !important;
     }
+    .m-mobile-wide {
+        width: 100% !important;
+    }
   }
 
 /* pc */
