@@ -1,34 +1,68 @@
+<!-- 关于我页 -->
 <template>
-  <button v-on:click="test = !test">Toggle</button>
-  <transition name="fade">
-    <p v-if="test">hello</p>
-  </transition>
+  <div class="pusher">
+    <BlogMenu></BlogMenu>
+    <!-- banner -->
+    <div class="home-banner banner">
+      <div class="ui text container banner_context">
+        <div class="image content">
+          <div class="ui rounde rounded image">
+            <img src="https://unsplash.it/100/100?image=1005" />
+          </div>
+          <div class="description">
+            <div class="ui header m-margin-top" style="color: #fff">大橙子</div>
+            <p></p>
+            <p>一个菜鸟后端程序员</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import BlogMenu from "@/components/BlogMenu.vue";
+
 export default {
-  name: "About",
-  data() {
-    return {
-      test: true,
-    };
+  name: "Home",
+  components: {
+    BlogMenu,
   },
-  created() {
-    this.$axios
-      .get("http://rap2api.taobao.org/app/mock/283878/user/findAll")
-      .then((res) => {
-        console.log(res);
+  data() {
+    return {};
+  },
+  methods: {
+    scrollDown() {
+      window.scrollTo({
+        behavior: "smooth",
+        top: document.documentElement.clientHeight,
       });
+    },
   },
 };
 </script>
 
 <style  scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
+.home-banner {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: url("http://r.photo.store.qq.com/psc?/V53KcXfb1umonn4HbITu3rINxs43TczD/45NBuzDIW489QBoVep5mcQz6a6RmGKe6G3ZOYoIoQdl9VNaSpHgiv8JNMAcpsS2xpNxouAuqFxY8uNvPxZ3qr6E798TSOFY*de6Bx*vCMlY!/r")
+    center center / cover no-repeat;
+  background-color: #49b1f5;
+  background-attachment: fixed;
+
+  color: #fff !important;
+  animation: header-effect 1s !important;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+.right.aligned.six.wide.column {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.bg-transparent .ui.segment {
+  background: rgb(0, 0, 0, 0) !important;
 }
 </style>
