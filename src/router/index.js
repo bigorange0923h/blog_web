@@ -3,7 +3,8 @@ import Home from '../views/Home.vue'
 import Archves from '../views/Archves.vue'
 import Blog from '../views/Blog.vue'
 import MD from '../views/MD.vue'
-
+import Login from '../views/admin/login.vue'
+import Index from '../views/admin/index.vue'
 
 const routes = [
   {
@@ -29,6 +30,20 @@ const routes = [
     path: '/md',
     name: 'MD',
     component: MD
+  },
+  {
+    path: '/admin',
+    component: Login
+  },
+  {
+    path: '/admin/login',
+    name: 'login',
+    component: Login
+  },
+  {
+    path: '/admin/index',
+    name: 'index',
+    component: Index
   },
   {
     path: '/about',
