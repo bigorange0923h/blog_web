@@ -1,53 +1,21 @@
 <!-- 后台首页 -->
 <template>
-  <!-- 首页头 -->
-  <el-container>
-    <el-header name="header">
-      <el-row style="height: 100%">
-        <el-col :span="6">
-          <div><h1 class="m-margin-top-small">BigOrange</h1></div></el-col
-        >
-        <!-- 
-         <el-avatar
-              class="m-margin-top-small"
-              style="float: right"
-              src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-            ></el-avatar> -->
-        <el-col :span="6" :offset="12">
-          <el-dropdown
-            trigger="click"
-            class="m-margin-top-small"
-            style="float: right"
-          >
-            <span class="el-dropdown-link">
-              <el-avatar
-                src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-              ></el-avatar>
-            </span>
-            <template #dropdown>
-              <el-dropdown-menu>
-                <el-dropdown-item class="clearfix">
-                  评论
-                  <el-badge class="mark" :value="12" />
-                </el-dropdown-item>
-                <el-dropdown-item class="clearfix"> 设置 </el-dropdown-item>
-                <el-dropdown-item class="clearfix"> 注销 </el-dropdown-item>
-              </el-dropdown-menu>
-            </template>
-          </el-dropdown>
-        </el-col>
-      </el-row>
-    </el-header>
+  <div class="common-layout">
     <el-container>
-      <el-aside width="200px">Aside</el-aside>
+      <el-header>Header</el-header>
       <el-main>Main</el-main>
     </el-container>
-  </el-container>
+  </div>
 </template>
 
 <script>
+import LeftMenu from "@/components/admin/LeftMenu.vue";
+
 export default {
   name: "index",
+  components: {
+    LeftMenu,
+  },
   data() {
     return {
       isCollapse: true,
@@ -65,13 +33,41 @@ export default {
 </script>
 
 <style  scoped>
-.el-header {
-  border-bottom: 1px solid #dcdfe6 !important;
-  color: #409eff;
-  height: 80px;
+.common-layout {
+  height: 100vh;
+}
+.el-header,
+.el-footer {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
 }
 
 .el-aside {
+  background-color: #d3dce6;
   color: #333;
+  text-align: center;
+  line-height: 200px;
+}
+
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
+}
+
+body > .el-container {
+  margin-bottom: 40px;
+}
+
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
+
+.el-container:nth-child(7) .el-aside {
+  line-height: 320px;
 }
 </style>

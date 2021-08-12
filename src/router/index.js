@@ -4,7 +4,8 @@ import Archves from '../views/Archves.vue'
 import Blog from '../views/Blog.vue'
 import MD from '../views/MD.vue'
 import Login from '../views/admin/login.vue'
-import Index from '../views/admin/index.vue'
+import Index from '../views/admin/Index.vue'
+import Admin from '../views/admin/Admin.vue'
 
 const routes = [
   {
@@ -33,10 +34,11 @@ const routes = [
   },
   {
     path: '/admin',
-    component: Login
+    name: 'admin',
+    component: Admin
   },
   {
-    path: '/admin/login',
+    path: '/login',
     name: 'login',
     component: Login
   },
